@@ -23,11 +23,11 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        btSomar.setOnClickListener{
+        btCalcular.setOnClickListener{
             CallWebService()
                     .execute(etNumero1.text.toString(),
                             etNumero2.text.toString(),
-                            "+")
+                            spOperacoes.selectedItem.toString())
         }
     }
 
